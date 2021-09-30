@@ -93,7 +93,9 @@ table{
 /* I gave you the selector, but not the property-value pair. 
 You can use Inspect Element or your editor to find selectors. */
 thead tr:first-child th:first-child{border-radius: 50px 0px 0px 0px;}
-thead tr:first-child
+thead tr:first-child th:last-child{border-radius: 0px 50px 0px 0px;}
+tbody tr:last-child th:first-child{border-radius: 0px, 0px 0px 50px;}
+tbody tr:last-child td:last-child{border-radius: 0px, 0px 50px 0px;}
 /*Add selectors and rules here*/
 a:link{
   color: #c12258;
@@ -115,8 +117,17 @@ a:active{
   text-decoration-style: wavy;
 }
 
+tr:nth-child(odd){
+background-color: transparent;
+
+}
 tr:nth-child(even){
 background-color: #d1d1d1;
+}
+
+tr:hover{
+background-color: rgba(126 8 37 / 25%);
+
 }
 
 
@@ -126,5 +137,7 @@ footer{
   text-align:center;
   color: #FFFFFF;
   min-height: 75px;
-  margin-left: ;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
